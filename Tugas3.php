@@ -10,18 +10,23 @@
 
 <body>
   <form action="Tugas3.php" method="post">
-    <h3>Kode & Kuantitas Barang Ke-1</h3>
-    <input type="number" name="kodeBarang-1" id="" placeholder="Kode Barang">
-    <input type="number" name="qty-1" id="" placeholder="Quantity">
-    <h3>Kode & Kuantitas Barang Ke-2</h3>
-    <input type="number" name="kodeBarang-2" id="" placeholder="Kode Barang">
-    <input type="number" name="qty-2" id="" placeholder="Quantity">
-    <input type="submit">
+    <div class="form__content">
+      <h3>Kode & Kuantitas Barang Ke-1</h3>
+      <input type="number" name="kodeBarang-1" id="" placeholder="Kode Barang">
+      <input type="number" name="qty-1" id="" placeholder="Quantity">
+      <h3>Kode & Kuantitas Barang Ke-2</h3>
+      <input type="number" name="kodeBarang-2" id="" placeholder="Kode Barang">
+      <input type="number" name="qty-2" id="" placeholder="Quantity">
+      <input type="submit">
+    </div>
   </form>
 
 
 
   <?php
+  error_reporting(E_ERROR | E_PARSE);
+  ini_set('display_errors', 0);
+
   $kodeBarang_1 = $_POST["kodeBarang-1"];
   $kodeBarang_2 = $_POST["kodeBarang-2"];
   $qty_1 = $_POST["qty-1"];
@@ -128,8 +133,12 @@
 
 
   }
+  function formatRupiah($angka)
+  {
+    return "Rp " . number_format($angka, 0, ',', '.');
+  }
 
-  $total = $hargaAkhir + $hargaAkhir_2;
+  $total = formatRupiah($hargaAkhir + $hargaAkhir_2);
 
   echo "
   <table>
@@ -144,18 +153,18 @@
   <tr>
     <td>1</td>
     <td>$barang</td>
-    <td>$harga</td>
+    <td>" . formatRupiah($harga) . "</td>
     <td>$qty_1</td>
-    <td>$diskon</td>
-    <td>$hargaAkhir</td>
+    <td>" . $diskon * 100 . "%</td>
+    <td>" . formatRupiah($hargaAkhir) . "</td>
   </tr>
   <tr>
     <td>2</td>
     <td>$barang_2</td>
-    <td>$harga_2</td>
+    <td>" . formatRupiah($harga_2) . "</td>
     <td>$qty_2</td>
-    <td>$diskon_2</td>
-    <td>$hargaAkhir_2</td>
+    <td>" . $diskon_2 * 100 . "%</td>
+    <td>" . formatRupiah($hargaAkhir_2) . "</td>
     </tr>
 </table> <br><br>
   ";
