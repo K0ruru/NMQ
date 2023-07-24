@@ -17,4 +17,13 @@ do {
   }
   $angka2++;
 } while ($angka2 <= 200);
+
+echo "<br><br>";
+
+for ($i = 1; $i <= 3; $i++) {
+  for ($j = 1; $j <= 3; $j++) {
+    echo "A" . $i . $j . " ";
+  }
+  echo "<br>";
+}
 ?>
