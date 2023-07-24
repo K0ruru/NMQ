@@ -1,3 +1,13 @@
+/* agar table nya tidak memiliki margin antar cell, 
+dan untuk mengenengahkan table nya ke tengah page */
+table {
+	border-collapse: collapse;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10rem;
+}
+
 /* memberi styling pada row dan cell nya */
 tr,
 td {
@@ -12,30 +22,25 @@ td {
 tr:nth-child(1) {
 	background-color: rgb(109, 184, 109);
 }
+
 /* Memberi warna pada kolom kedua */
 td:nth-child(2) {
 	background-color: rgb(109, 184, 109);
 }
+
 /* Memberi warna pada kolom kedua yang barisnya bernilai genap */
 tr:nth-child(odd) td:nth-child(2) {
 	background-color: rgb(41, 41, 41);
 }
+
 /* Memberi round-corner pada cell pertama di baris pertama */
 tr:nth-child(1) td:nth-child(1) {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
+
 /* sama dengan yang di-atas tapi di cell ke-empat */
 tr:nth-child(1) td:nth-child(4) {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-}
-/* agar table nya tidak memiliki margin antar cell, 
-dan untuk mengenengahkan table nya ke tengah page */
-table {
-	border-collapse: collapse;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 10rem;
 }
