@@ -10,6 +10,7 @@
 
 <body>
   <h1>Atribut colspan dan rowspan</h1>
+  <!-- Membuat table dengan border, dan memberikan class nya -->
   <table border="1" class="table__1">
     <tr>
       <th>Baris 1, Kolom 1</th>
@@ -19,6 +20,7 @@
 
     <tr>
       <th>Baris 2, Kolom 1</th>
+      <!-- memberi atribut colspan biar kolom nya di merge -->
       <th colspan="2">Baris 2, Kolom 2&3</th>
     </tr>
 
@@ -59,6 +61,7 @@
     </tr>
 
     <tr>
+      <!-- memberikan atribut rowsapn agar baris 1 dan 2 nya menyatu -->
       <th rowspan="2">Baris 2, Kolom 1</th>
       <th>Baris 2, Kolom 2</th>
       <th>Baris 2, Kolom 3</th>

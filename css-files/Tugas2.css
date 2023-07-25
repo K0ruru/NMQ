@@ -1,11 +1,14 @@
+/* Mengganti size dengan class table 1 */
 .table__1 {
 	width: 58%;
 }
 
+/* Mengganti size dengan class table 2 */
 .table__2 {
 	width: 45%;
 }
 
+/* Mengganti size dengan class table 3 */
 .table__3 {
 	width: 35%;
 }
