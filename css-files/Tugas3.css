@@ -11,6 +11,9 @@ h3 {
 table {
 	border-collapse: collapse;
 	margin: 30px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 tr,
@@ -31,4 +34,68 @@ tr:nth-child(even) td:nth-child(even) {
 }
 tr:nth-child(odd) th:nth-child(odd) {
 	background-color: rgb(37, 37, 37);
+}
+
+p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.form__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.content_1 {
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	flex-direction: column;
+}
+
+.content_1 input {
+	margin: 10px ;
+	text-decoration: none;
+	border: none;
+	border-bottom: solid 1px black;
+}
+
+.content_1 input:focus {
+	outline: none;
+}
+
+.content_2 {
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	flex-direction: column;
+}
+
+.content_2 input {
+	margin: 10px ;
+	text-decoration: none;
+	border: none;
+	border-bottom: solid 1px black;
+}
+
+.content_2 input:focus {
+	outline: none;
+}
+
+.submit-btn {
+	padding: 7px 25px;
+	border: none;
+	background-color: rgb(60, 0, 128);
+	color: white;
+	border-radius: 3px;
+	transition: 0.2s ease-in;
+}
+
+.submit-btn:hover {
+	background-color: rgb(89, 16, 172);
+	padding: 10px 28px;
 }

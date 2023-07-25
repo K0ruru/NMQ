@@ -9,18 +9,23 @@
 </head>
 
 <body>
+
   <!-- Membuat form untuk file "Tugas3.php" dan agar form nya memberikan kembali data yang di input dengan "post" -->
   <form action="Tugas3.php" method="post">
     <div class="form__content">
-      <h3>Kode & Kuantitas Barang Ke-1</h3>
-      <!-- memberikan kolom input yang hanya menrima angka untuk kode barang dan kuantitas barang yang pertama -->
-      <input type="number" name="kodeBarang-1" id="" placeholder="Kode Barang">
-      <input type="number" name="qty-1" id="" placeholder="Quantity">
-      <h3>Kode & Kuantitas Barang Ke-2</h3>
-      <!-- memberikan kolom input yang hanya menrima angka untuk kode barang dan kuantitas barang yang kedua -->
-      <input type="number" name="kodeBarang-2" id="" placeholder="Kode Barang">
-      <input type="number" name="qty-2" id="" placeholder="Quantity">
-      <input type="submit">
+      <div class="content_1">
+        <h3>Kode & Kuantitas Barang Ke-1</h3>
+        <!-- memberikan kolom input yang hanya menrima angka untuk kode barang dan kuantitas barang yang pertama -->
+        <input type="number" name="kodeBarang-1" id="" placeholder="Kode Barang">
+        <input type="number" name="qty-1" id="" placeholder="Quantity">
+      </div>
+      <div class="content_2">
+        <h3>Kode & Kuantitas Barang Ke-2</h3>
+        <!-- memberikan kolom input yang hanya menrima angka untuk kode barang dan kuantitas barang yang kedua -->
+        <input type="number" name="kodeBarang-2" id="" placeholder="Kode Barang">
+        <input type="number" name="qty-2" id="" placeholder="Quantity">
+      </div>
+      <input type="submit" class="submit-btn">
     </div>
   </form>
 
@@ -182,7 +187,7 @@
 </table> <br><br>
   ";
 
-  echo "Total Bayar : $total";
+  echo "<p>Total Bayar : $total</p>";
 
   ?>
 </body>
